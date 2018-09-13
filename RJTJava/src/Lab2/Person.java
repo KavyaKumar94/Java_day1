@@ -54,7 +54,7 @@ public class Person {
 	Gender gender;
 	int phoneNo;
 	
-	Person(String firstName, String lastName) {
+	public Person(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
@@ -76,19 +76,19 @@ public class Person {
 		System.out.println("Phone Number: "+getPhoneNo());
 
 	}
-	String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	void setFirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	String getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
 
-	void setLastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 

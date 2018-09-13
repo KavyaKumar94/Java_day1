@@ -1,6 +1,5 @@
 package Lab3;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
@@ -24,8 +23,8 @@ public class StringOperation {
 	StringOperation() {};
 	
 	StringOperation (String str, int choice) {
-		this.str = str;
-		this.choice = choice;
+		StringOperation.str = str;
+		StringOperation.choice = choice;
 	}
 	private static void options() {
 		
@@ -109,8 +108,7 @@ public class StringOperation {
 		System.out.println("Please enter the string on which operations need to be performed");
 		
 		Scanner scanner = new Scanner(System.in);
-		
-		so.str = scanner.nextLine();
+		StringOperation.str = scanner.nextLine();
 		
 		System.out.println("Please enter your choice from numbers 1 through 4 which are as follows:");
 		System.out.println("1. Add the String to itself");
@@ -118,11 +116,11 @@ public class StringOperation {
 		System.out.println("3. Remove duplicate characters in the String");
 		System.out.println("4. Change odd characters to upper case");
 
-		Scanner scanner1 = new Scanner(System.in);
-		so.choice = scanner1.nextInt();
+		Scanner scanner1 = scanner;
+		StringOperation.choice = scanner1.nextInt();
 		
 		options();
-		System.out.println("String Operation Result: " + so.str + " for choice number: " + so.choice);
+		System.out.println("String Operation Result: " + StringOperation.str + " for choice number: " + StringOperation.choice);
 		
 	}
 
