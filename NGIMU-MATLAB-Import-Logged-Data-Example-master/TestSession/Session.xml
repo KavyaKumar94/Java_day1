@@ -1,0 +1,8 @@
+<Session>
+  <SessionInformation Name="TestSession" Date="2018-09-24 12:07:22" Duration="00:00:15.000" />
+  <ApplicationInformation ApplicationName="NGIMU GUI" ApplicationVersion="1.12.6712.21823" ApiVersion="1.12.6712.21822" />
+  <UserInformation UserName="AUV Team" MachineName="DESKTOP-7DH6TEN" />
+  <Devices>
+    <Device SerialNumber="0029BD6F" DeviceName="NGIMU" ConnectionType="Serial" DirectoryName="NGIMU - 0029BD6F" />
+  </Devices>
+</Session>

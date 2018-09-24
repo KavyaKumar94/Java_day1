@@ -1,0 +1,39 @@
+clc
+clear
+close all;
+
+%% Import data
+
+sessionData = importSession('My Session');
+
+%% Resample data
+
+[resampledSessionData, time] = resampleSession(sessionData, 0.01);
+
+%% Plot synchronised gyroscope data
+
+deviceColours = hsv(resampledSessionData.numberOfDevices);
+surf(peaks);
+colormap(deviceColours);
+shading interp;
+
+for deviceIndex = 1:resampledSessionData.numberOfDevices
+    
+    deviceName = resampledSessionData.deviceNames{deviceIndex};
+    deviceColour = deviceColours(deviceIndex, :);
+    
+    
+end
+
+%%
+% Import data
+
+
+time = resampledSessionData.ngimuBlue0029d0b4.sensors.time;
+gyrX = resampledSessionData.ngimuBlue0029d0b4.sensors.gyroscopeX;
+gyrY = resampledSessionData.ngimuBlue0029d0b4.sensors.gyroscopeY;
+gyrZ = resampledSessionData.ngimuBlue0029d0b4.sensors.gyroscopeZ;
+accX = resampledSessionData.ngimuBlue0029d0b4.sensors.accelerometerX;
+accY = resampledSessionData.ngimuBlue0029d0b4.sensors.accelerometerY;
+accZ = resampledSessionData.ngimuBlue0029d0b4.sensors.accelerometerZ;
+clear('xIMUdata');
